@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
 
         <div className="flex items-center justify-between mt-auto">
           <span className="text-lg font-bold text-foreground">
-            ₹{price.toFixed(0).toLocaleString()}
+            ${price.toFixed(0).toLocaleString()}
           </span>
           <button
             onClick={() =>
