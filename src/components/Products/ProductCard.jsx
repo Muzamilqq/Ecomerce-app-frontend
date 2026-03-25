@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
         className="block relative overflow-hidden rounded-lg mb-3"
       >
         <img
-          src={product.images?.[0]?.url || "https://placehold.co/300x300"}
+          src={product.image || "https://placehold.co/300x300"}
           alt={product.name}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
         />
