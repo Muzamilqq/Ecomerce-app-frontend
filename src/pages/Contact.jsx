@@ -36,7 +36,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                <p className="text-muted-foreground">hello@shopmate.com</p>
+                <p className="text-muted-foreground">
+                  muzamilashraf329@gmail.com
+                </p>
               </div>
             </div>
 
@@ -46,19 +48,13 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">+92 3122333053</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">Address</h3>
-                <p className="text-muted-foreground">
-                  123 Shop Street, City, ST 12345
-                </p>
               </div>
             </div>
           </div>
