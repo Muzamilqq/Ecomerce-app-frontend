@@ -56,7 +56,7 @@ const CartSidebar = () => {
             cart.map((item) => (
               <div key={item.product.id} className="glass-card flex gap-3">
                 <img
-                  src={item.product.images?.[0]?.url}
+                  src={item.product.image}
                   alt={item.product.name}
                   className="w-14 h-14 object-cover rounded-lg flex-shrink-0"
                 />
