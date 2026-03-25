@@ -56,6 +56,12 @@ const Contact = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                <p className="text-muted-foreground">
+                  123 Shop Street, City, ST 12345
+                </p>
+              </div>
             </div>
           </div>
 

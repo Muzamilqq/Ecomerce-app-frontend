@@ -60,6 +60,10 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary" />
                 <span>+92 3122333053</span>
               </div>
+              <div className="flex items-center space-x-3 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span>San Francisco, CA</span>
+              </div>
             </div>
           </div>
 
