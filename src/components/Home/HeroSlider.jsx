@@ -14,6 +14,7 @@ const HeroSlider = () => {
         "Up to 50% off on premium headphones, smartwatches, and more",
       image: "./electronics.jpg",
       cta: "Shop Electronics",
+      // FIX: use encodeURIComponent so "Home & Garden" doesn't break the URL
       url: "/products?category=Electronics",
     },
     {
@@ -32,7 +33,9 @@ const HeroSlider = () => {
       description: "Beautiful furniture and decor for every home",
       image: "./furniture.jpg",
       cta: "Shop Home",
-      url: `/products?category=Home & Garden`,
+      // FIX: was a template literal `/products?category=Home & Garden`
+      // The & breaks the query string — encodeURIComponent fixes it
+      url: `/products?category=${encodeURIComponent("Home & Garden")}`,
     },
   ];
 
@@ -55,9 +58,9 @@ const HeroSlider = () => {
 
   return (
     <div className="relative h-[70vh] overflow-hidden rounded-2xl">
-      {/* Single Active Slide */}
       <div className="relative h-full">
-        <div className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
           style={{ backgroundImage: `url(${slide.image})` }}
         />
         <div className="absolute inset-0 glass" />
@@ -82,7 +85,6 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Arrows */}
       <button
         onClick={prevSlide}
         className="hidden sm:block absolute left-6 top-1/2 transform -translate-y-1/2 p-3 glass-card hover:glow-on-hover animate-smooth"
@@ -96,7 +98,6 @@ const HeroSlider = () => {
         <ChevronRight className="w-6 h-6 text-primary" />
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <button

@@ -14,7 +14,7 @@ import { forgotPassword } from "../../store/slices/authSlice";
 const LoginModal = () => {
   const dispatch = useDispatch();
   const { isAuthPopupOpen } = useSelector((s) => s.popup);
-  const { isLoggingIn, isSigningUp, error } = useSelector((s) => s.auth);
+  const { Logging, isSigningUp, error } = useSelector((s) => s.auth);
   const location = useLocation();
 
   const [mode, setMode] = useState("login"); // login | register | forgot
@@ -130,10 +130,10 @@ const LoginModal = () => {
 
           <button
             type="submit"
-            disabled={isLoggingIn || isSigningUp}
+            disabled={Logging || isSigningUp}
             className="w-full py-3 gradient-primary text-primary-foreground rounded-lg font-semibold text-sm hover:glow-on-hover transition-all disabled:opacity-60"
           >
-            {isLoggingIn || isSigningUp
+            {Logging || isSigningUp
               ? "Please wait..."
               : mode === "login"
                 ? "Sign In"

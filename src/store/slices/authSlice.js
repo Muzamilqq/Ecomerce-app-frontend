@@ -118,7 +118,7 @@ const authSlice = createSlice({
   initialState: {
     authUser: null,
     isSigningUp: false,
-    isLoggingIn: false,
+    Logging: false,
     isUpdatingProfile: false,
     isUpdatingPassword: false,
     isRequestingForToken: false,
@@ -145,16 +145,16 @@ const authSlice = createSlice({
     });
     // login
     builder.addCase(loginUser.pending, (state) => {
-      state.isLoggingIn = true;
+      state.Logging = true;
       state.error = null;
     });
     builder.addCase(loginUser.fulfilled, (state, action) => {
-      state.isLoggingIn = false;
+      state.Logging = false;
       state.authUser = action.payload.user;
       toast.success("Logged in successfully!");
     });
     builder.addCase(loginUser.rejected, (state, action) => {
-      state.isLoggingIn = false;
+      state.Logging = false;
       state.error = action.payload;
       toast.error(action.payload);
     });
